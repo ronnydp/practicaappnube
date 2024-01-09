@@ -11,7 +11,9 @@ CREATE TABLE agenda
   telefmovi                  VARCHAR(10),
   email                      VARCHAR(30),
   fbc                        VARCHAR(30),
-  CONSTRAINT agenda_codigoper_pk PRIMARY KEY (codigoper)
+  distrito_id                INT,
+  CONSTRAINT agenda_codigoper_pk PRIMARY KEY (codigoper),
+  CONSTRAINT fk_distrito FOREIGN KEY (distrito_id) REFERENCES distrito(id)
  );
 
 CREATE TABLE distrito (
