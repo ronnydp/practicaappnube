@@ -16,6 +16,7 @@ CREATE TABLE agenda
   CONSTRAINT fk_distrito FOREIGN KEY (distrito_id) REFERENCES distrito(id)
  );
 
+DROP TABLE IF EXISTS distrito;
 CREATE TABLE distrito (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(45) NOT NULL
