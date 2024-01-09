@@ -8,7 +8,7 @@ CREATE TABLE agenda
   apellido                   VARCHAR(45) NOT NULL,
   direccion                  VARCHAR(45),
   telefijo                   VARCHAR(9),
-  telefmovi                  VARCHAR(9),
+  telefmovi                  VARCHAR(10),
   email                      VARCHAR(30),
   fbc                        VARCHAR(30),
   CONSTRAINT agenda_codigoper_pk PRIMARY KEY (codigoper)
