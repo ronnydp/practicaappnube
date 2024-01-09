@@ -1,3 +1,4 @@
+DROP DATABASE BASEDATOS;
 CREATE SCHEMA IF NOT EXISTS BASEDATOS;
 USE BASEDATOS;
 
@@ -9,7 +10,7 @@ CREATE TABLE distrito (
 
 DROP TABLE IF EXISTS agenda;
 CREATE TABLE agenda
- (codigoper                  VARCHAR(3)  NOT NULL,
+ (codigoper                  INT AUTO_INCREMENT PRIMARY KEY,
   nombre                     VARCHAR(45) NOT NULL,
   apellido                   VARCHAR(45) NOT NULL,
   direccion                  VARCHAR(45),
@@ -18,7 +19,6 @@ CREATE TABLE agenda
   email                      VARCHAR(30),
   fbc                        VARCHAR(30),
   distrito_id                INT,
-  CONSTRAINT agenda_codigoper_pk PRIMARY KEY (codigoper),
   CONSTRAINT fk_distrito FOREIGN KEY (distrito_id) REFERENCES distrito(id)
  );
 
